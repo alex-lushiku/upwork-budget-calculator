@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Upwork Budget Calculator",
+  "version": "0.1.0",
+  "description": "Convert project budgets to the right currency after Upworks deduction.",
+  
+  "icons": {
+    "48": "res/logo-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./jquery.min.js", "./calculate.js"] 
+    }
+  ],
+
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Upwork Budget Calculator",
+    "default_popup": "./popup.html"
+  },
+
+  "permissions": []
+}
